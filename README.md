@@ -18,6 +18,9 @@ Vimproc is necessary for the `file_rec/async` command in Unite. Vimproc needs to
 `cd ~/.vim/bundle/vimproc.vim`
 `make`
 
+### Tern for vim
+Need to run `npm install` from the tern_for_vim directory.
+
 ### tmux
 Start tmux with -2 flag to force 256 colors.
 
