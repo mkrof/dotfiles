@@ -42,10 +42,11 @@ let g:solarized_termcolors=256
 
 set background=dark
 
-colorscheme gruvbox
+colorscheme molokai
 
 
 " ------- SYNTASTIC -------------------
+let g:syntastic_javascript_jshint_conf="~/.jshintrc"
 let g:syntastic_javascript_checkers=['jshint']
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
