@@ -80,6 +80,9 @@ let g:unite_source_history_yank_enable=1
 nnoremap <C-y> :Unite history/yank<CR>
 
 
+" ------- AIRLINE -----------------------
+let g:airline_theme='dark'
+
 " ------- GUI -------------------------
 if has('gui_running')
     set guioptions-=T   " Remove the toolbar
