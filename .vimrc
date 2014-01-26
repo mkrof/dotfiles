@@ -31,6 +31,8 @@ syntax enable
 " Autocompletion <c-x> <c-o>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+" Session options
+set sessionoptions=blank,buffers,curdir,folds,help,options,resize,tabpages,winpos,winsize
 
 " ------- COLORS ----------------------
 if $COLORTERM == 'gnome-terminal'
