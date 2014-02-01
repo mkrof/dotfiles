@@ -1,4 +1,4 @@
 .netrwhist
 *.swp
 .newsbeuter/history.*
-.newsbeuter/cache.db
+.newsbeuter/cache.db*
