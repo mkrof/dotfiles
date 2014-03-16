@@ -25,6 +25,8 @@ set noerrorbells
 " Always show the status bar
 set laststatus=2
 
+set nowrap
+
 " Enable syntax highlighting
 syntax enable
 
@@ -45,6 +47,9 @@ let g:solarized_termcolors=256
 set background=dark
 
 colorscheme molokai
+
+" ------- DELIMITMATE -----------------
+let delimitMate_expand_cr = 1 " expand matchpairs on return.
 
 
 " ------- SYNTASTIC -------------------
