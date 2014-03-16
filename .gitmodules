@@ -68,3 +68,6 @@
 [submodule ".vim/bundle/vim-css-color"]
 	path = .vim/bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule ".vim/bundle/calendar-vim"]
+	path = .vim/bundle/calendar-vim
+	url = git://github.com/mattn/calendar-vim/
