@@ -70,7 +70,7 @@
 	url = https://github.com/ap/vim-css-color.git
 [submodule ".vim/bundle/calendar-vim"]
 	path = .vim/bundle/calendar-vim
-	url = git://github.com/mattn/calendar-vim/
+	url = https://github.com/mattn/calendar-vim.git
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
