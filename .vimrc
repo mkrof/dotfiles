@@ -30,6 +30,10 @@ set nowrap
 " Enable syntax highlighting
 syntax enable
 
+" Specific filetypes
+filetype plugin indent on
+au FileType html set sw=2 ts=2
+
 " Autocompletion <c-x> <c-o>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
@@ -75,7 +79,6 @@ autocmd BufRead,BufNewFile *.cshtml setf html
 
 
 " ------- SNIPMATE --------------------
-filetype plugin on
 
 
 " ------- UNITE -----------------------
