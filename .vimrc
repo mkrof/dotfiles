@@ -89,6 +89,12 @@ nnoremap <C-p> :Unite -start-insert file_rec/async buffer<CR>
 let g:unite_source_history_yank_enable=1
 nnoremap <C-y> :Unite history/yank<CR>
 
+" Have unite use ag instead of find. ag ignores patterns in .gitignore &
+" .hgignore...
+if executable('ag')
+    let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+endif
+
 
 " ------- AIRLINE -----------------------
 let g:airline_powerline_fonts=1
