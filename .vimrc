@@ -83,9 +83,10 @@ autocmd BufRead,BufNewFile *.cshtml setf html
 
 
 " ------- UNITE -----------------------
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
-nnoremap <C-p> :Unite -start-insert file_rec/async buffer<CR>
+nnoremap <C-p> :Unite file_rec/async -buffer-name=buffer -profile-name=buffer buffer<CR>
+call unite#custom#profile('buffer', 'smartcase', 1)
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 let g:unite_source_history_yank_enable=1
 nnoremap <C-y> :Unite history/yank<CR>
