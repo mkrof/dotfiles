@@ -81,18 +81,17 @@ autocmd BufRead,BufNewFile *.cshtml setf html
 
 
 " ------- UNITE -----------------------
-" nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
-nnoremap <C-p> :Unite file_rec/async -buffer-name=buffer -profile-name=buffer buffer<CR>
-call unite#custom#profile('buffer', 'smartcase', 1)
+nnoremap <C-p> :Unite -start-insert file_rec/async -buffer-name=buffer -profile-name=buffer buffer<CR>
+call unite#custom#profile('buffer', 'context.smartcase', 1)
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#custom#source('file_rec/async', 'ignore_pattern', 'node_modules/\|bower_components/')
 
 let g:unite_source_history_yank_enable=1
 nnoremap <C-y> :Unite history/yank<CR>
 
-" Have unite use ag instead of find. ag ignores patterns in .gitignore &
-" .hgignore...
+" Have unite use ag instead of find.
 if executable('ag')
-    let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 endif
 
 
