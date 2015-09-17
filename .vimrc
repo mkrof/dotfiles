@@ -14,6 +14,8 @@ set wildmode=full
 set path=$PWD/**
 set wildignore=*.pyc,*.o,*.obj,node_modules/**,.idea/**
 
+set backspace=2 " make backspace work
+
 set autoindent
 
 " Highlight search results
@@ -26,6 +28,9 @@ set noerrorbells
 set laststatus=2
 
 set nowrap
+
+" copy to system clipboard (requires >= 7.4)
+set clipboard=unnamed
 
 " Enable syntax highlighting
 syntax enable
@@ -54,7 +59,7 @@ set background=dark
 colorscheme molokai
 
 " ------- DELIMITMATE -----------------
-let delimitMate_expand_cr = 1 " expand matchpairs on return.
+" let delimitMate_expand_cr = 1 " expand matchpairs on return.
 
 
 " ------- SYNTASTIC -------------------
@@ -114,6 +119,5 @@ endif
 if has('win32')
     set guifont=Consolas
     colorscheme mustang
-    set backspace=2 " make backspace work
 endif
 
