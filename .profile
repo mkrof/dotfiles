@@ -23,9 +23,3 @@ fi
 
 ### Node
 export NODE_PATH=/usr/lib/node_modules
-
-### PhantomJS
-PATH=$PATH:$HOME/Tools/phantomjs-1.8.1/bin 
-
-### JSHint
-PATH=$PATH:$NODE_PATH/jshint/bin
