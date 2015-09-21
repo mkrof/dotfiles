@@ -23,3 +23,26 @@ fi
 
 ### Node
 export NODE_PATH=/usr/lib/node_modules
+
+### PS1
+colorReset="\[\033[0m\]"
+red="\[\033[0;31m\]"
+green="\[\033[0;32m\]"
+gray="\[\033[0;90m\]"
+time12h="\T"
+shortPath="\w"
+
+export PS1=$gray$time12h$colorReset'$(git branch &>/dev/null;\
+if [ $? -eq 0 ]; then \
+    echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+    if [ "$?" -eq "0" ]; then \
+    # @4 - Clean repository - nothing to commit
+    echo "'$green'"$(__git_ps1 " (%s)"); \
+    else \
+    # @5 - Changes to working tree
+    echo "'$red'"$(__git_ps1 " (%s)"); \
+    fi) '$colorReset$shortPath$colorReset'\$ "; \
+else \
+    # @2 - Prompt when not in GIT repo
+    echo " '$colorReset$shortPath$colorReset'\$ "; \
+fi)'
