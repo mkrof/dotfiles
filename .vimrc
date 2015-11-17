@@ -56,7 +56,7 @@ let g:solarized_termcolors=256
 
 set background=dark
 
-colorscheme molokai
+colorscheme gruvbox
 
 " ------- DELIMITMATE -----------------
 " let delimitMate_expand_cr = 1 " expand matchpairs on return.
