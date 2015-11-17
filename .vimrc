@@ -74,6 +74,9 @@ let javascript_enable_domhtmlcss=1
 " -------JAVASCRIPT-LIBRARIES-SYNTAX---
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs,requirejs'
 
+" ------- VIM-JSX ---------------------
+let g:jsx_ext_required=0
+
 
 " ------- FILETYPE SPECIFIC -----------
 " Treat *.cshtml files as html
