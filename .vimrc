@@ -83,7 +83,10 @@ let g:jsx_ext_required=0
 " Treat *.cshtml files as html
 autocmd BufRead,BufNewFile *.cshtml setf html
 
-" autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType styl setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 
 " ------- SNIPMATE --------------------
