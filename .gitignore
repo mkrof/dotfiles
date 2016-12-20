@@ -2,3 +2,4 @@
 *.swp
 .newsbeuter/history.*
 .newsbeuter/cache.db*
+.vim/plugged

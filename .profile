@@ -46,3 +46,8 @@ else \
     # @2 - Prompt when not in GIT repo
     echo " '$colorReset$shortPath$colorReset'\$ "; \
 fi)'
+
+# pyenv
+export PATH="/Users/36261/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

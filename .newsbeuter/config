@@ -1,7 +1,0 @@
-# Newsbeuter config
-browser firefox
-notify-screen yes
-
-# Colors
-color info            color184  color23    bold
-color listfocus       white     color238   bold
