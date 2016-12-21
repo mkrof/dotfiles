@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 
 " Search
@@ -7,12 +6,15 @@ Plug 'junegunn/fzf.vim'
 
 " Autocompletion
 Plug 'mattn/emmet-vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'for': ['javascript', 'javascript.jsx'] }
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim',  { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'jelera/vim-javascript-syntax',  { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Open GL Shading Language
 Plug 'tikhomirov/vim-glsl'
@@ -33,16 +35,11 @@ Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'tomasr/molokai'
 
-" TODO
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'neomake/neomake'
-" tern
-
 call plug#end()
 
 " Configure Python environments
-let g:python_host_prog = '/Users/36261/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/36261/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog='/Users/36261/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog='/Users/36261/.pyenv/versions/neovim3/bin/python'
 
 " General
 set number
@@ -71,14 +68,20 @@ au FileType javascript set sw=2 ts=2 sts=2
 " Autocompletion <c-x> <c-o>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
-" Autocompletion <c-x> <c-o>
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+" Deoplete
+let g:deoplete#enable_at_startup=1
+let g:deoplete#file#enable_buffer_path=1
 
 " Configure FZF
 nnoremap <C-p> :GFiles<CR> 
 
+"Configure vim-javascript
+let g:javascript_plugin_jsdoc=1
+let g:javascript_plugin_ngdoc=1
+let g:javascript_plugin_flow=1
+
 " Configure javascript-libraries-syntax
-let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,react,flux,chai,ramda,vue,d3'
+let g:used_javascript_libs='jquery,underscore,angularjs,angularui,angularuirouter,react,flux,chai,ramda,vue,d3'
 
 " Configure vim-airline
 let g:airline_powerline_fonts=1
