@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
+Plug 'neomake/neomake'
 
 " UI
 Plug 'vim-airline/vim-airline'
@@ -59,18 +60,23 @@ set path=$PWD/**
 set wildignore+=*.pyc,*.o,*.obj,node_modules/**,.idea/**
 set laststatus=2        " Always show the status bar
 set clipboard=unnamed   " copy to system clipboard (requires >= 7.4)
+let $PATH.=':node_modules/.bin/'
 
-" Specific filetypes
+" Handle specific filetype configuration
 filetype plugin indent on
 au FileType html set sw=2 ts=2
 au FileType javascript set sw=2 ts=2 sts=2
 
-" Autocompletion <c-x> <c-o>
+" Configure autocompletion <c-x> <c-o>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
-" Deoplete
+" Configure deoplete
 let g:deoplete#enable_at_startup=1
 let g:deoplete#file#enable_buffer_path=1
+
+" Configure neomake
+autocmd! BufWritePost,BufEnter * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 " Configure FZF
 nnoremap <C-p> :GFiles<CR> 
@@ -86,6 +92,6 @@ let g:used_javascript_libs='jquery,underscore,angularjs,angularui,angularuiroute
 " Configure vim-airline
 let g:airline_powerline_fonts=1
 
-" Colorscheme
+" Set initial olorscheme
 set background=dark
 colorscheme gruvbox
