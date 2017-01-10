@@ -66,6 +66,7 @@ let $PATH.=':node_modules/.bin/'
 filetype plugin indent on
 au FileType html set sw=2 ts=2
 au FileType javascript set sw=2 ts=2 sts=2
+au FileType markdown set wrap
 
 " Configure autocompletion <c-x> <c-o>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
