@@ -16,6 +16,9 @@ Plug 'jelera/vim-javascript-syntax',  { 'for': ['javascript', 'javascript.jsx'] 
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
+" CSS 
+Plug 'ap/vim-css-color'
+
 " Open GL Shading Language
 Plug 'tikhomirov/vim-glsl'
 
