@@ -92,6 +92,9 @@ let g:javascript_plugin_jsdoc=1
 let g:javascript_plugin_ngdoc=1
 let g:javascript_plugin_flow=1
 
+" Configure mxw/vim-jsx
+let g:jsx_ext_required=0
+
 " Configure javascript-libraries-syntax
 let g:used_javascript_libs='jquery,underscore,angularjs,angularui,angularuirouter,react,flux,chai,ramda,vue,d3'
 
