@@ -22,6 +22,9 @@ Plug 'ap/vim-css-color'
 " Open GL Shading Language
 Plug 'tikhomirov/vim-glsl'
 
+" C#
+Plug 'OrangeT/vim-csharp'
+
 " Utilities
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
