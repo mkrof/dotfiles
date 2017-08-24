@@ -53,8 +53,8 @@ Plug 'tomasr/molokai'
 call plug#end()
 
 " Configure Python environments
-let g:python_host_prog='/Users/36261/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog='/Users/36261/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog=$HOME.'/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim3/bin/python'
 
 " General
 set number
