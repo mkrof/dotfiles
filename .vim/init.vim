@@ -13,7 +13,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim',  { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'jelera/vim-javascript-syntax',  { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install tern' }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
 " HTML / CSS 
@@ -87,6 +87,7 @@ au FileType gitcommit set spell
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " Configure deoplete
+set runtimepath+=~/.vim/plugged/deoplete.nvim/
 let g:deoplete#enable_at_startup=1
 let g:deoplete#file#enable_buffer_path=1
 
