@@ -16,8 +16,10 @@ Plug 'jelera/vim-javascript-syntax',  { 'for': ['javascript', 'javascript.jsx'] 
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
-" CSS 
+" HTML / CSS 
 Plug 'ap/vim-css-color'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'tpope/vim-haml'
 
 " Open GL Shading Language
 Plug 'tikhomirov/vim-glsl'
@@ -31,11 +33,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
+Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
 Plug 'neomake/neomake'
+Plug 'scrooloose/syntastic'
+Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
 
 " UI
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/calendar-vim'
 
 " Colorschemes
