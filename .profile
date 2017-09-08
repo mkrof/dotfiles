@@ -47,7 +47,16 @@ else \
     echo " '$colorReset$shortPath$colorReset'\$ "; \
 fi)'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # pyenv
 export PATH="/Users/36261/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Terminal colors
+export CLICOLOR=1
+export TERM=xterm-256color
+
