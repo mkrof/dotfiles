@@ -52,7 +52,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # pyenv
-export PATH="/Users/36261/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
