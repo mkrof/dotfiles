@@ -80,6 +80,8 @@ let $PATH.=':node_modules/.bin/'
 filetype plugin indent on
 au FileType html set sw=2 ts=2
 au FileType javascript set sw=2 ts=2 sts=2
+au FileType scss set sw=2 ts=2 sts=2
+au FileType css set sw=2 ts=2 sts=2
 au FileType markdown set wrap spell
 au FileType gitcommit set spell
 
