@@ -3,3 +3,4 @@
 .newsbeuter/history.*
 .newsbeuter/cache.db*
 .vim/plugged
+.tmux/plugins
