@@ -17,6 +17,9 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install tern' }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'bendavis78/vim-polymer'
 
+"Lua
+Plug 'wolfgangmehner/lua-support'
+
 " HTML / CSS 
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
@@ -80,10 +83,12 @@ let $PATH.=':node_modules/.bin/'
 
 " Handle specific filetype configuration
 filetype plugin indent on
+filetype plugin on
 au FileType html set sw=2 ts=2
 au FileType javascript set sw=2 ts=2 sts=2
 au FileType scss set sw=2 ts=2 sts=2
 au FileType css set sw=2 ts=2 sts=2
+au FileType lua set sw=2 ts=2 sts=2
 au FileType markdown set wrap spell
 au FileType gitcommit set spell
 
@@ -97,7 +102,7 @@ let g:deoplete#file#enable_buffer_path=1
 
 " Configure neomake
 autocmd! BufWritePost,BufEnter * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = []
 
 " Configure FZF
 nnoremap <C-p> :GFiles<CR> 
@@ -131,6 +136,7 @@ let g:javascript_enable_domhtmlcss = 1
 augroup vimrc-javascript
   autocmd!
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
+  autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 
 " Configure vim-airline
