@@ -20,6 +20,9 @@ Plug 'bendavis78/vim-polymer'
 "Lua
 Plug 'wolfgangmehner/lua-support'
 
+"MoonScript
+Plug 'leafo/moonscript-vim'
+
 " HTML / CSS 
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
