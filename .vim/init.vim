@@ -34,6 +34,9 @@ Plug 'tikhomirov/vim-glsl'
 " C#
 Plug 'OrangeT/vim-csharp'
 
+" Jinja / Nunjucks syntax highlighting
+Plug 'lepture/vim-jinja'
+
 " Utilities
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
