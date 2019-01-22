@@ -147,6 +147,13 @@ augroup vimrc-javascript
   autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 
+" Configure emmet
+let g:user_emmet_settings = {
+\ 'jinja': {
+\   'extends': 'html',
+\ },
+\}
+
 " Configure vim-airline
 let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
