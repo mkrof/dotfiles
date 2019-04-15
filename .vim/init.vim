@@ -97,6 +97,7 @@ au FileType css set sw=2 ts=2 sts=2
 au FileType lua set sw=2 ts=2 sts=2
 au FileType markdown set wrap spell
 au FileType gitcommit set spell
+autocmd BufNewFile,BufRead *.njk set filetype=html
 
 " Configure autocompletion <c-x> <c-o>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -123,8 +124,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_html_tidy_exec = 'tidy5'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = ['npm run lint --']
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = ['npm run lint --']
 
 "Configure vim-javascript
 let g:javascript_plugin_jsdoc=1
@@ -146,13 +147,6 @@ augroup vimrc-javascript
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
   autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
-
-" Configure emmet
-let g:user_emmet_settings = {
-\ 'jinja': {
-\   'extends': 'html',
-\ },
-\}
 
 " Configure vim-airline
 let g:airline_powerline_fonts=1
