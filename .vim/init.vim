@@ -22,7 +22,7 @@ Plug 'wolfgangmehner/lua-support'
 "MoonScript
 Plug 'leafo/moonscript-vim'
 
-" HTML / CSS 
+" HTML / CSS
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-haml'
@@ -70,7 +70,7 @@ let g:python3_host_prog=$HOME.'/.pyenv/versions/neovim3/bin/python'
 set number
 set tabstop=4		"Specify the width of a tab character
 set expandtab		"Use spaces instead of tabs
-set softtabstop=4	"Amount of whitespace to be inserted 
+set softtabstop=4	"Amount of whitespace to be inserted
 set shiftwidth=4	"Amount of whitespace to insert or remove using indentation commands in normal mode.
 set autoindent
 set hlsearch        " Highlight search results
@@ -110,7 +110,7 @@ autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_javascript_enabled_makers = []
 
 " Configure FZF
-nnoremap <C-p> :GFiles<CR> 
+nnoremap <C-p> :GFiles<CR>
 
 
 " Configure Syntastic
