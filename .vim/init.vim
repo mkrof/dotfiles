@@ -15,7 +15,6 @@ Plug 'othree/javascript-libraries-syntax.vim',  { 'for': ['javascript', 'javascr
 Plug 'jelera/vim-javascript-syntax',  { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install tern' }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'bendavis78/vim-polymer'
 
 "Lua
 Plug 'wolfgangmehner/lua-support'
