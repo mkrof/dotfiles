@@ -26,6 +26,7 @@ Plug 'leafo/moonscript-vim'
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-haml'
+Plug 'batsuev/csscomb-vim'
 
 " Open GL Shading Language
 Plug 'tikhomirov/vim-glsl'
@@ -91,11 +92,13 @@ filetype plugin indent on
 filetype plugin on
 au FileType html set sw=2 ts=2
 au FileType javascript set sw=2 ts=2 sts=2
+au FileType javascript.jsx set sw=2 ts=2 sts=2
 au FileType scss set sw=2 ts=2 sts=2
 au FileType css set sw=2 ts=2 sts=2
 au FileType lua set sw=2 ts=2 sts=2
 au FileType markdown set wrap spell
 au FileType gitcommit set spell
+autocmd FileType markdown let g:indentLine_enabled=0
 autocmd BufNewFile,BufRead *.njk set filetype=html
 
 " Configure autocompletion <c-x> <c-o>
@@ -123,8 +126,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_html_tidy_exec = 'tidy5'
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exe = ['npm run lint --']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = ['npm run lint --']
 
 "Configure vim-javascript
 let g:javascript_plugin_jsdoc=1
@@ -144,6 +147,7 @@ let g:javascript_enable_domhtmlcss = 1
 augroup vimrc-javascript
   autocmd!
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
+  autocmd FileType javascript.jsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
   autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 
@@ -185,5 +189,7 @@ else
 endif
 
 " Set initial olorscheme
+let g:gruvbox_italic=0
+let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
